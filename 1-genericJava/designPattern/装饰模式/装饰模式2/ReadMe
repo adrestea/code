@@ -1,0 +1,15 @@
+装饰模式(Decorator Pattern)是一种比较常见的模式,其定义如下:Attach additional responsibilities to an object dynamically keeping the same interface.Decorators provide a flexible alternative to subclassing for extending functionality.(动态地给一个对象添加一些额外的职责。就增加功能来说,装饰模式相比生成子类更为灵活。)
+
+优点：
+● 装饰者类和被装饰者类相互独立，不会互相影响。即Component类无须知道Decorator类,Decorator类是从外部来扩展Component类的功能,而Decorator也不用知道具体的构件
+● 装饰模式是继承关系的一个替代方案。我们看装饰类Decorator,不管装饰多少层,返回的对象还是Component,实现的还是is-a的关系。
+● 装饰模式可以动态地扩展一个实现类的功能
+● 扩展性非常好
+
+缺点：
+● 多层的装饰是比较复杂，过程难于控制。所以尽量的减少装饰者类的个数
+
+使用场景
+● 需要扩展一个类的功能,或给一个类增加附加功能。
+● 需要动态地给一个对象增加功能,这些功能可以再动态地撤销。
+● 需要为一批的兄弟类进行改装或加装功能,当然是首选装饰模式。
