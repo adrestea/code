@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="GBK"?>
+
+<project name="junit" default="usage" basedir=".">
+	<property name="classes" value="classes"/>
+	<path id="classpath">
+		<fileset dir="${classes}" casesensitive="yes">
+			<include name="**/*.class"/>
+		</fileset>
+		<fileset dir="lib" casesensitive="yes">
+			<include name="**/*.jar"/>
+		</fileset>
+	</path>
+
+	<target name="compile">
+		<delete dir="${classes}"/>
+		<mkdir dir="${classes}"/>
+		<javac destdir="${classes}" debug="on">
+			<src path="src"/>
+			<src path="test"/>
+			<classpath refid="classpath"/>
+		</javac>	
+	</target>
+
+	<target name="run" description="运行"  depends="compile">
+		<java classname="AllTests" classpath="classes" fork="true">
+			<classpath refid="classpath"/>
+		</java>
+	</target>
+
+</project>

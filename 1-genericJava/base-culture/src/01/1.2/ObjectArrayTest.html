@@ -1,0 +1,23 @@
+<script type="text/javascript">
+	// 定义、并初始化一个数组
+	var objArr = [];
+	// 将objArr数组的第2个元素赋成一个数组
+	objArr[1] = [];
+	// 将objArr[1]的值赋给objArr2变量
+	var objArr2 = objArr[1];
+	// 再次将objArr2的第2个元素赋成一个数组
+	objArr2[1] = [];
+	// 将objArr2[1]的值赋给objArr3变量
+	var objArr3 = objArr2[1];
+	// 再次将objArr3的第2个元素赋成一个数组
+	objArr3[1] = [];
+	// 将objArr3[1]的值赋给iArr变量
+	var iArr = objArr3[1];
+	// 为iArr数组的数组元素赋值
+	for (var i = 0 ; i < 5 ; i++ )
+	{
+		iArr[i] = i * 3 + 1;
+	}
+	// 直接将objArr当成四维数组使用
+	document.writeln(objArr[1][1][1][2]);
+</script>

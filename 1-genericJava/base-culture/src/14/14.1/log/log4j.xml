@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="gbk" ?> 
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+	<!-- 定义输出到控制台的Appender -->
+	<appender name="stdout" class="org.apache.log4j.ConsoleAppender"> 
+		<!-- 定义该Appender对应的Layout -->
+		<layout class="org.apache.log4j.PatternLayout"> 
+			<param name="ConversionPattern" 
+				value="===CRAZYIT.ORG=== %r %d [%t] %-p %c %x - #%l# - %m%n"/> 
+		</layout> 
+	</appender> 
+	<!-- 定义输出到日志文件的Appender，每天一个日志文件 -->
+	<appender name="logfile" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="crazyit.log"/> 
+		<!-- 是否采用将日志追加到已有的日志文件之后 -->
+		<param name="Append" value="true"/> 
+		<!-- 定义日期格式 -->
+		<param name="DatePattern" value=".yyyy-MM-dd"/>
+		<!-- 定义该Appender对应的Layout -->
+		<layout class="org.apache.log4j.PatternLayout"> 
+			<param name="ConversionPattern" 
+				value="===CRAZYIT.ORG=== %r %d %p [%c] - %m%n"/> 
+		</layout> 
+	</appender>
+	<!-- 该Logger将对lee包、及其所有子包之内的Logger起作用 -->
+	<logger name="lee">
+		<!-- 输出debug及其更高级别的日志 -->
+		<level value="debug"/>
+		<!-- 将日志同时输出到控制台和日志文件 -->
+		<appender-ref ref="stdout"/> 
+		<appender-ref ref="logfile"/> 
+	</logger>
+	<!-- 指定日志级别，引用哪些Appender -->
+	<root> 
+		<!-- 输出info及其更高级别的日志 -->
+		<level value="info"/> 
+		<!-- 将日志同时输出到控制台和日志文件 -->
+		<appender-ref ref="stdout"/> 
+		<appender-ref ref="logfile"/> 
+	</root>
+</log4j:configuration>

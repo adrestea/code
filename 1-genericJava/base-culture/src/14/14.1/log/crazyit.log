@@ -1,0 +1,10 @@
+===CRAZYIT.ORG=== 0 2012-08-13 17:13:53,734 DEBUG [lee.LogQs] - 开始执行程序
+===CRAZYIT.ORG=== 0 2012-08-13 17:13:53,734 DEBUG [lee.LogQs] - 开始执行程序
+===CRAZYIT.ORG=== 109 2012-08-13 17:13:53,843 INFO [lee.LogQs] - 程序执行了100ms
+===CRAZYIT.ORG=== 109 2012-08-13 17:13:53,843 INFO [lee.LogQs] - 程序执行了100ms
+===CRAZYIT.ORG=== 328 2012-08-13 17:13:54,062 WARN [lee.LogQs] - 程序运行了执行了300ms
+===CRAZYIT.ORG=== 328 2012-08-13 17:13:54,062 WARN [lee.LogQs] - 程序运行了执行了300ms
+===CRAZYIT.ORG=== 328 2012-08-13 17:13:54,062 ERROR [lee.LogQs] - 程序运行了执行了300ms
+===CRAZYIT.ORG=== 328 2012-08-13 17:13:54,062 ERROR [lee.LogQs] - 程序运行了执行了300ms
+===CRAZYIT.ORG=== 328 2012-08-13 17:13:54,062 FATAL [lee.LogQs] - 程序运行了执行了300ms
+===CRAZYIT.ORG=== 328 2012-08-13 17:13:54,062 FATAL [lee.LogQs] - 程序运行了执行了300ms
